@@ -1,3 +1,5 @@
 ui/weights/diameter_weights.pth filter=lfs diff=lfs merge=lfs -text
 ui/weights/position_weights.pth filter=lfs diff=lfs merge=lfs -text
 *.pth filter=lfs diff=lfs merge=lfs -text
+*.pkg filter=lfs diff=lfs merge=lfs -text
+*.exe filter=lfs diff=lfs merge=lfs -text
