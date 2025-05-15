@@ -13,8 +13,8 @@ def main():
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     diameter_model = VertebralArteryRegressor(pretrained=False).to(device)
     position_model = ArteriesLocalizationModel(pretrained=False).to(device)
-    diameter_model.load_state_dict(torch.load('ui/weights/best_vertebral_artery_augmented_ants.pth', map_location=device))
-    position_model.load_state_dict(torch.load('ui/weights/best_arteries_model_ants.pth', map_location=device))
+    diameter_model.load_state_dict(torch.load('ui/weights/diameter_weights.pth', map_location=device))
+    position_model.load_state_dict(torch.load('ui/weights/position_weights.pth', map_location=device))
 
 
     app = QApplication(sys.argv)
